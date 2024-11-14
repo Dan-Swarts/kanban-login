@@ -20,7 +20,7 @@ const Login = () => {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     try {
-      const data = await login(loginData);
+      const data: any = await login(loginData);
       Auth.login(data.token);
     } catch (err) {
       console.error('Failed to login', err);
